@@ -17,23 +17,6 @@ Subject to change depending on demand. Check back here for the most up to date i
 - send Ether straight to the contract address, it's that easy!
 - LamboCoin is an unowned ERC20 compliant contract, it will never selfdestruct and you can trade it as you wish!
 
-### FAQ
-- **Why Lamborghini?**
-
-The first car any cryptomillionaire must buy is obviously a Lamborghini, so logically the original ultra rare coin should be based on them
-
-- **Why only 256 coins?**
-
-For Exclusivity, Like a real Lamborghini each coin is exclusive and made in limited numbers. This IGO is the only IGO that will occur meaning you will be one of the elite few who can have the privelege of owning one (or many, depending on how much Ether you have)
-
-- **How do I get them?**
-
-Just send Ether to the contract address, coins will be distributed to the highest bidders such that the lowest bid, when applied to these highest bidders, will distribute no more than 250 coins to them
-
-- **If I dont get any coins will I get my money back?**
-
-No, it's a risk you must be willing to take. No one said ultra-exclusivity would be cheap.
-  
 ### What's the details?
 - ICO Contract Address (Rinkeby TestNet):
 
@@ -230,6 +213,24 @@ add this address to your wallet interface to view your coins upon distribution
   } 
 ]
 ```
+
+### FAQ
+- **Why Lamborghini?**
+
+The first car any cryptomillionaire must buy is obviously a Lamborghini, so logically the original ultra rare coin should be based on them
+
+- **Why only 256 coins?**
+
+For Exclusivity, Like a real Lamborghini each coin is exclusive and made in limited numbers. This IGO is the only IGO that will occur meaning you will be one of the elite few who can have the privelege of owning one (or many, depending on how much Ether you have)
+
+- **How do I get them?**
+
+Just send Ether to the contract address, coins will be distributed to the highest bidders such that the lowest bid, when applied to these highest bidders, will distribute no more than 250 coins to them
+
+- **If I dont get any coins will I get my money back?**
+
+No, it's a risk you must be willing to take. No one said ultra-exclusivity would be cheap.
+
 ### To Do:
 - [x] Write Contract
 - [x] Test Contract
