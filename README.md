@@ -250,4 +250,4 @@ No, it's a risk you must be willing to take. No one said ultra-exclusivity would
 - [ ] Add Contract source to [Etherscan](https://etherscan.io)
 - [ ] Trim JSON
 - [ ] Release to MainNet
-- [ ] Develop frontpage
+- [ ] Develop Front-end for users
