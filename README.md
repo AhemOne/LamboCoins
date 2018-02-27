@@ -240,7 +240,7 @@ For Exclusivity, Like a real Lamborghini each coin is exclusive and made in limi
 
 Just send Ether to the contract address, coins will be distributed to the highest bidders such that the lowest bid, when applied to these highest bidders, will distribute no more than 250 coins to them
 
-- **If I dont get any coins will I get my money back?**
+- **If I dont get any coins will I get my Ether back?**
 
 No, it's a risk you must be willing to take. No one said ultra-exclusivity would be cheap.
 
