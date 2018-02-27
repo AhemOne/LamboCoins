@@ -18,201 +18,208 @@ Subject to change depending on demand. Check back here for the most up to date i
 - LamboCoin is an unowned ERC20 compliant contract, it will never selfdestruct and you can trade it as you wish!
 
 ### What's the details?
-- ICO Contract Address (Rinkeby TestNet):
+- ICO
+  - Contract Address (Rinkeby TestNet):
 
-`0xe81bf7c7f25410931c26ad91cA1b5cdD5DDa4C22`
+  `0xe81bf7c7f25410931c26ad91cA1b5cdD5DDa4C22`
 
-Send Ether to this address to be in the running to win those LamboCoins!
+  Send Ether to this address to be in the running to win those LamboCoins!
+  
+  - JSON Interface; copy the code below to your preferred wallet interface to see your current standing
+  ```
+  [ { "constant": true, "inputs": [ { "name": "you", "type": "address" } ], "name": "userStatistics", "outputs": [ { "name": "amount", "type": "uint256", "value": "0" }, { "name": "lambos", "type": "uint256", "value": "0" } ], "payable": false, "stateMutability": "view", "type": "function" }, { "constant": true, "inputs": [], "name": "LamboContractAddress", "outputs": [ { "name": "", "type": "address", "value": "0xde22f96b0ed0c3a906b70cedccbbf259df294359" } ], "payable": false, "stateMutability": "view", "type": "function" }, { "constant": true, "inputs": [], "name": "currentLamboPrice", "outputs": [ { "name": "Gwei", "type": "uint256", "value": "0" } ], "payable": false, "stateMutability": "view", "type": "function" }, { "constant": false, "inputs": [], "name": "endICO", "outputs": [], "payable": false, "stateMutability": "nonpayable", "type": "function" }, { "constant": true, "inputs": [], "name": "investors", "outputs": [ { "name": "", "type": "uint256", "value": "0" } ], "payable": false, "stateMutability": "view", "type": "function" }, { "constant": true, "inputs": [], "name": "owner", "outputs": [ { "name": "", "type": "address", "value": "0xfd8d1160459e17a9d7ec2c62340760e24a5f75ab" } ], "payable": false, "stateMutability": "view", "type": "function" }, { "inputs": [], "payable": false, "stateMutability": "nonpayable", "type": "constructor" }, { "payable": true, "stateMutability": "payable", "type": "fallback" }, { "anonymous": false, "inputs": [ { "indexed": false, "name": "who", "type": "address" }, { "indexed": false, "name": "userNumber", "type": "uint256" } ], "name": "newInvestor", "type": "event" }, { "anonymous": false, "inputs": [ { "indexed": false, "name": "who", "type": "address" }, { "indexed": false, "name": "howMuch", "type": "uint256" } ], "name": "valueAdded", "type": "event" } ]
+  ```
 
-- LamboCoin Contract Address (Rinkeby TestNet):
+- LamboCoin
+  - Contract Address (Rinkeby TestNet):
 
-`0xdE22f96b0Ed0C3a906B70cEDCCBbf259dF294359`
+  `0xdE22f96b0Ed0C3a906B70cEDCCBbf259dF294359`
 
-add this address to your wallet interface to view your coins upon distribution
+  add this address to your wallet interface to view your coins upon distribution
 
-- JSON Interface; copy the code below to your preferred wallet interface to access the trade functions
-```
-[ 
-  { 
-    "constant": true, 
-    "inputs": [], 
-    "name": "name", 
-    "outputs": [ { "name": "", "type": "string", "value": "LamboCoin" } ], 
-    "payable": false, 
-    "stateMutability": "view", 
-    "type": "function" 
-  }, { 
-    "constant": false, 
-    "inputs": [ { "name": "_spender", "type": "address" }, 
-                { "name": "_value", "type": "uint256" } ], 
-    "name": "approve", 
-    "outputs": [ { "name": "success", "type": "bool" } ], 
-    "payable": false, 
-    "stateMutability": "nonpayable", 
-    "type": "function" 
-  }, { 
-    "constant": true, 
-    "inputs": [], 
-    "name": "totalSupply", 
-    "outputs": [ { "name": "", "type": "uint256", "value": "256" } ], 
-    "payable": false, 
-    "stateMutability": "view", 
-    "type": "function" 
-  }, { 
-    "constant": false, 
-    "inputs": [], 
-    "name": "killContract", 
-    "outputs": [], 
-    "payable": false, 
-    "stateMutability": "nonpayable", 
-    "type": "function" 
-  }, { 
-    "constant": false, 
-    "inputs": [ { "name": "_from", "type": "address" }, 
-                { "name": "_to", "type": "address" }, 
-                { "name": "_amount", "type": "uint256" } ], 
-    "name": "transferFrom", 
-    "outputs": [ { "name": "success", "type": "bool" } ], 
-    "payable": false, 
-    "stateMutability": "nonpayable", 
-    "type": "function" 
-  }, { 
-    "constant": true, 
-    "inputs": [], 
-    "name": "decimals", 
-    "outputs": [ { "name": "", "type": "uint256", "value": "0" } ], 
-    "payable": false, "stateMutability": "view", "type": "function" 
-  }, { 
-    "constant": false, 
-    "inputs": [], 
-    "name": "completeDistribution", 
-    "outputs": [ { "name": "", "type": "bool" } ], 
-    "payable": false, 
-    "stateMutability": "nonpayable", 
-    "type": "function" 
-  }, { 
-    "constant": false, 
-    "inputs": [], 
-    "name": "withdraw", 
-    "outputs": [], 
-    "payable": false, 
-    "stateMutability": "nonpayable", 
-    "type": "function" 
-  }, { 
-    "constant": true, 
-    "inputs": [ { "name": "_owner", "type": "address" } ], 
-    "name": "balanceOf", 
-    "outputs": [ { "name": "", "type": "uint256", "value": "0" } ], 
-    "payable": false, 
-    "stateMutability": "view", 
-    "type": "function" 
-  }, { 
-    "constant": true, 
-    "inputs": [], 
-    "name": "symbol", 
-    "outputs": [ { "name": "", "type": "string", "value": "Lamborghini" } ], 
-    "payable": false, 
-    "stateMutability": "view", 
-    "type": "function" 
-  }, { 
-    "constant": false, 
-    "inputs": [ { "name": "_to", "type": "address" }, 
-                { "name": "_amount", "type": "uint256" } ], 
-    "name": "transfer", 
-    "outputs": [ { "name": "success", "type": "bool" } ], 
-    "payable": false, 
-    "stateMutability": "nonpayable", "type": "function" 
-  }, { 
-    "constant": true, 
-    "inputs": [ { "name": "tokenAddress", "type": "address" }, 
-                { "name": "who", "type": "address" } ], 
-    "name": "getTokenBalance", 
-    "outputs": [ { "name": "", "type": "uint256", "value": "0" } ], 
-    "payable": false, 
-    "stateMutability": "view", 
-    "type": "function" 
-  }, { 
-    "constant": true, 
-    "inputs": [ { "name": "_owner", "type": "address" }, 
-                { "name": "_spender", "type": "address" } ], 
-    "name": "allowance", 
-    "outputs": [ { "name": "", "type": "uint256", "value": "0" } ], 
-    "payable": false, "stateMutability": "view", "type": "function" 
-  }, { 
-    "constant": false, 
-    "inputs": [ { "name": "_tokenContract", "type": "address" } ], 
-    "name": "withdrawForeignTokens", 
-    "outputs": [ { "name": "", "type": "bool" } ], 
-    "payable": false, 
-    "stateMutability": "nonpayable", 
-    "type": "function" 
-  }, { 
-    "constant": false, 
-    "inputs": [ { "name": "newOwner", "type": "address" } ], 
-    "name": "transferOwnership", 
-    "outputs": [], 
-    "payable": false, 
-    "stateMutability": "nonpayable", 
-    "type": "function" 
-  }, { 
-    "constant": false, 
-    "inputs": [ { "name": "_to", "type": "address" }, 
-                { "name": "_amount", "type": "uint256" } ], 
-    "name": "distribute", 
-    "outputs": [ { "name": "", "type": "bool" } ], 
-    "payable": false, 
-    "stateMutability": "nonpayable", 
-    "type": "function" 
-  }, { 
-    "inputs": [ { "name": "_totalSupply", 
-                  "type": "uint256", 
-                  "index": 0, 
-                  "typeShort": "uint", 
-                  "bits": "256", 
-                  "displayName": "&thinsp;<span class=\"punctuation\">_</span>&thinsp;total Supply", 
-                  "template": "elements_input_uint", 
-                  "value": "256" } ], 
-    "payable": false, 
-    "stateMutability": "nonpayable", 
-    "type": "constructor" 
-  }, { 
-    "payable": true, 
-    "stateMutability": "payable", 
-    "type": "fallback" 
-  }, { 
-    "anonymous": false, 
-    "inputs": [ { "indexed": true, 
-                  "name": "_from", 
-                  "type": "address" 
-                }, { 
-                  "indexed": true, 
-                  "name": "_to", 
-                  "type": "address" 
-                }, { 
-                  "indexed": false, 
-                  "name": "_value", 
-                  "type": "uint256" 
-                } ], 
-    "name": "Transfer", 
-    "type": "event" 
-  }, { 
-    "anonymous": false, 
-    "inputs": [ { "indexed": true, 
-                  "name": "_owner", 
-                  "type": "address" 
-                }, { 
-                  "indexed": true, 
-                  "name": "_spender", 
-                  "type": "address" 
-                }, { 
-                  "indexed": false, 
-                  "name": "_value", 
-                  "type": "uint256" } ], 
-    "name": "Approval", 
-    "type": "event" 
-  } 
-]
-```
+  - JSON Interface; copy the code below to your preferred wallet interface to access the trade functions
+  ```
+  [ 
+    { 
+      "constant": true, 
+      "inputs": [], 
+      "name": "name", 
+      "outputs": [ { "name": "", "type": "string", "value": "LamboCoin" } ], 
+      "payable": false, 
+      "stateMutability": "view", 
+      "type": "function" 
+    }, { 
+      "constant": false, 
+      "inputs": [ { "name": "_spender", "type": "address" }, 
+                  { "name": "_value", "type": "uint256" } ], 
+      "name": "approve", 
+      "outputs": [ { "name": "success", "type": "bool" } ], 
+      "payable": false, 
+      "stateMutability": "nonpayable", 
+      "type": "function" 
+    }, { 
+      "constant": true, 
+      "inputs": [], 
+      "name": "totalSupply", 
+      "outputs": [ { "name": "", "type": "uint256", "value": "256" } ], 
+      "payable": false, 
+      "stateMutability": "view", 
+      "type": "function" 
+    }, { 
+      "constant": false, 
+      "inputs": [], 
+      "name": "killContract", 
+      "outputs": [], 
+      "payable": false, 
+      "stateMutability": "nonpayable", 
+      "type": "function" 
+    }, { 
+      "constant": false, 
+      "inputs": [ { "name": "_from", "type": "address" }, 
+                  { "name": "_to", "type": "address" }, 
+                  { "name": "_amount", "type": "uint256" } ], 
+      "name": "transferFrom", 
+      "outputs": [ { "name": "success", "type": "bool" } ], 
+      "payable": false, 
+      "stateMutability": "nonpayable", 
+      "type": "function" 
+    }, { 
+      "constant": true, 
+      "inputs": [], 
+      "name": "decimals", 
+      "outputs": [ { "name": "", "type": "uint256", "value": "0" } ], 
+      "payable": false, "stateMutability": "view", "type": "function" 
+    }, { 
+      "constant": false, 
+      "inputs": [], 
+      "name": "completeDistribution", 
+      "outputs": [ { "name": "", "type": "bool" } ], 
+      "payable": false, 
+      "stateMutability": "nonpayable", 
+      "type": "function" 
+    }, { 
+      "constant": false, 
+      "inputs": [], 
+      "name": "withdraw", 
+      "outputs": [], 
+      "payable": false, 
+      "stateMutability": "nonpayable", 
+      "type": "function" 
+    }, { 
+      "constant": true, 
+      "inputs": [ { "name": "_owner", "type": "address" } ], 
+      "name": "balanceOf", 
+      "outputs": [ { "name": "", "type": "uint256", "value": "0" } ], 
+      "payable": false, 
+      "stateMutability": "view", 
+      "type": "function" 
+    }, { 
+      "constant": true, 
+      "inputs": [], 
+      "name": "symbol", 
+      "outputs": [ { "name": "", "type": "string", "value": "Lamborghini" } ], 
+      "payable": false, 
+      "stateMutability": "view", 
+      "type": "function" 
+    }, { 
+      "constant": false, 
+      "inputs": [ { "name": "_to", "type": "address" }, 
+                  { "name": "_amount", "type": "uint256" } ], 
+      "name": "transfer", 
+      "outputs": [ { "name": "success", "type": "bool" } ], 
+      "payable": false, 
+      "stateMutability": "nonpayable", "type": "function" 
+    }, { 
+      "constant": true, 
+      "inputs": [ { "name": "tokenAddress", "type": "address" }, 
+                  { "name": "who", "type": "address" } ], 
+      "name": "getTokenBalance", 
+      "outputs": [ { "name": "", "type": "uint256", "value": "0" } ], 
+      "payable": false, 
+      "stateMutability": "view", 
+      "type": "function" 
+    }, { 
+      "constant": true, 
+      "inputs": [ { "name": "_owner", "type": "address" }, 
+                  { "name": "_spender", "type": "address" } ], 
+      "name": "allowance", 
+      "outputs": [ { "name": "", "type": "uint256", "value": "0" } ], 
+      "payable": false, "stateMutability": "view", "type": "function" 
+    }, { 
+      "constant": false, 
+      "inputs": [ { "name": "_tokenContract", "type": "address" } ], 
+      "name": "withdrawForeignTokens", 
+      "outputs": [ { "name": "", "type": "bool" } ], 
+      "payable": false, 
+      "stateMutability": "nonpayable", 
+      "type": "function" 
+    }, { 
+      "constant": false, 
+      "inputs": [ { "name": "newOwner", "type": "address" } ], 
+      "name": "transferOwnership", 
+      "outputs": [], 
+      "payable": false, 
+      "stateMutability": "nonpayable", 
+      "type": "function" 
+    }, { 
+      "constant": false, 
+      "inputs": [ { "name": "_to", "type": "address" }, 
+                  { "name": "_amount", "type": "uint256" } ], 
+      "name": "distribute", 
+      "outputs": [ { "name": "", "type": "bool" } ], 
+      "payable": false, 
+      "stateMutability": "nonpayable", 
+      "type": "function" 
+    }, { 
+      "inputs": [ { "name": "_totalSupply", 
+                    "type": "uint256", 
+                    "index": 0, 
+                    "typeShort": "uint", 
+                    "bits": "256", 
+                    "displayName": "&thinsp;<span class=\"punctuation\">_</span>&thinsp;total Supply", 
+                    "template": "elements_input_uint", 
+                    "value": "256" } ], 
+      "payable": false, 
+      "stateMutability": "nonpayable", 
+      "type": "constructor" 
+    }, { 
+      "payable": true, 
+      "stateMutability": "payable", 
+      "type": "fallback" 
+    }, { 
+      "anonymous": false, 
+      "inputs": [ { "indexed": true, 
+                    "name": "_from", 
+                    "type": "address" 
+                  }, { 
+                    "indexed": true, 
+                    "name": "_to", 
+                    "type": "address" 
+                  }, { 
+                    "indexed": false, 
+                    "name": "_value", 
+                    "type": "uint256" 
+                  } ], 
+      "name": "Transfer", 
+      "type": "event" 
+    }, { 
+      "anonymous": false, 
+      "inputs": [ { "indexed": true, 
+                    "name": "_owner", 
+                    "type": "address" 
+                  }, { 
+                    "indexed": true, 
+                    "name": "_spender", 
+                    "type": "address" 
+                  }, { 
+                    "indexed": false, 
+                    "name": "_value", 
+                    "type": "uint256" } ], 
+      "name": "Approval", 
+      "type": "event" 
+    } 
+  ]
+  ```
 
 ### FAQ
 - **Why Lamborghini?**
