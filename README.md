@@ -2,7 +2,7 @@
 ## The Ferrari of Altcoins - An ultra-limited supply collector's edition coin for the astute crypto-wizard
 
 ### Closing Date
-Subject to change depending on demand. Check back here for the most up to date information
+_Subject to change depending on demand. Check back here for the most up to date information_
 ```
 1st April, 2018
 ```
