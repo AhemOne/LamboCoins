@@ -22,6 +22,8 @@ Subject to change depending on demand. Check back here for the most up to date i
   - Contract Address (Rinkeby TestNet):
 
   `0xe81bf7c7f25410931c26ad91cA1b5cdD5DDa4C22`
+  
+  See it on [Etherscan](https://rinkeby.etherscan.io/address/0xe81bf7c7f25410931c26ad91ca1b5cdd5dda4c22)
 
   Send Ether to this address to be in the running to win those LamboCoins!
   
@@ -34,8 +36,12 @@ Subject to change depending on demand. Check back here for the most up to date i
   - Contract Address (Rinkeby TestNet):
 
   `0xdE22f96b0Ed0C3a906B70cEDCCBbf259dF294359`
-
-  add this address to your wallet interface to view your coins upon distribution
+  
+  See it on [Etherscan](https://rinkeby.etherscan.io/address/0xdE22f96b0Ed0C3a906B70cEDCCBbf259dF294359) 
+  
+  _Note: Because this coin is launched by the ICO contract, it will not become active until the end of the ICO_
+  
+  Add this address to your wallet interface to view your coins upon distribution
 
   - JSON Interface; copy the code below to your preferred wallet interface to access the trade functions
   ```
@@ -241,6 +247,7 @@ No, it's a risk you must be willing to take. No one said ultra-exclusivity would
 ### To Do:
 - [x] Write Contract
 - [x] Test Contract
+- [ ] Add Contract source to [Etherscan](https://etherscan.io)
 - [ ] Trim JSON
 - [ ] Release to MainNet
 - [ ] Develop frontpage
