@@ -1,4 +1,4 @@
-pragma solidity ^0.4.8;
+pragma solidity ^0.4.20;
 
 // LamboCoin - The Ferrari of coins
 
@@ -59,8 +59,8 @@ contract LamboICO {
         lambos = investor[you].paid.div(currentPrice());
     }
     
-    function currentLamboPrice() view public returns (uint Gwei) {
-        Gwei = currentPrice();
+    function currentLamboPrice() view public returns (uint Wei) {
+        Wei = currentPrice();
         return;
     }
 
