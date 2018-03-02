@@ -15,223 +15,38 @@ When all Lamborghinis are sold!
 - Lamborghinis are tradable as soon as you buy them!
 - each successive lamborghini is cost `price * interest rate` more. Don't miss out!!
 - Ether sent to ICO contract will only allow purchase of 1 Lamborghini at a time.
-- Ensure you withdraw all your remaining funds. The ICO will end approximately 1 week after the last Lamborghini is sold.
+- Ensure you withdraw all your remaining funds. The ICO will end as last Lamborghini is sold, but a grace period will be allowed for users to withdraw their remaining funds before the ICO contract is shut down.
 - LamboCoin is an unowned ERC20 compliant contract, it will never selfdestruct and you can trade it as you wish!
+- Adopters get special rewards in our future games!
 
 ### What's the details?
-- ICO
-  - Contract Address (Rinkeby TestNet):
+#### Initial Coin Offering (ICO):
 
-  `none currently`
-  
-  See it on [Etherscan](https://rinkeby.etherscan.io/address/?)
+  **Contract Address:** `none currently` [Etherscan](https://rinkeby.etherscan.io/address/?)
 
-  Send Ether to this address to be in the running to win those LamboCoins!
+  Send Ether to this address to get your Lamborghinis! The ICO contact constitutes a basic token so you can add it to your watched tokens list. Doing show will display how much ether left over ether is available to you for withdrawal. _Please withdraw your remaining funds before the ICO end date posted above or risk losing it!_
   
-  - JSON Interface; copy the code below to your preferred wallet interface to see your current standing
+  JSON Interface; copy the code below to your preferred wallet interface to see your current standing
   ```
   awaiting update
   ```
 
-- LamboCoin
-  - Contract Address (Rinkeby TestNet):
-
-  `none currently`
-  
-  See it on [Etherscan](https://rinkeby.etherscan.io/address/?) 
+#### LamboCoin
+  **Contract Address:** `none currently` [Etherscan](https://rinkeby.etherscan.io/address/?) 
   
   _Note: LamboCoin manages the ICO in a separate contract_
   
-  Add this address to your wallet interface to tranfer your coins
+  Add this address to your wallet interface to tranfer your coins. This is a ERC20 compliant token so may be traded at will. This address will _not_ accept Ether. Please buy tokens from the ICO address.
 
   - JSON Interface; copy the code below to your preferred wallet interface to access the trade functions
   ```
-  [ 
-    { 
-      "constant": true, 
-      "inputs": [], 
-      "name": "name", 
-      "outputs": [ { "name": "", "type": "string", "value": "LamboCoin" } ], 
-      "payable": false, 
-      "stateMutability": "view", 
-      "type": "function" 
-    }, { 
-      "constant": false, 
-      "inputs": [ { "name": "_spender", "type": "address" }, 
-                  { "name": "_value", "type": "uint256" } ], 
-      "name": "approve", 
-      "outputs": [ { "name": "success", "type": "bool" } ], 
-      "payable": false, 
-      "stateMutability": "nonpayable", 
-      "type": "function" 
-    }, { 
-      "constant": true, 
-      "inputs": [], 
-      "name": "totalSupply", 
-      "outputs": [ { "name": "", "type": "uint256", "value": "256" } ], 
-      "payable": false, 
-      "stateMutability": "view", 
-      "type": "function" 
-    }, { 
-      "constant": false, 
-      "inputs": [], 
-      "name": "killContract", 
-      "outputs": [], 
-      "payable": false, 
-      "stateMutability": "nonpayable", 
-      "type": "function" 
-    }, { 
-      "constant": false, 
-      "inputs": [ { "name": "_from", "type": "address" }, 
-                  { "name": "_to", "type": "address" }, 
-                  { "name": "_amount", "type": "uint256" } ], 
-      "name": "transferFrom", 
-      "outputs": [ { "name": "success", "type": "bool" } ], 
-      "payable": false, 
-      "stateMutability": "nonpayable", 
-      "type": "function" 
-    }, { 
-      "constant": true, 
-      "inputs": [], 
-      "name": "decimals", 
-      "outputs": [ { "name": "", "type": "uint256", "value": "0" } ], 
-      "payable": false, "stateMutability": "view", "type": "function" 
-    }, { 
-      "constant": false, 
-      "inputs": [], 
-      "name": "completeDistribution", 
-      "outputs": [ { "name": "", "type": "bool" } ], 
-      "payable": false, 
-      "stateMutability": "nonpayable", 
-      "type": "function" 
-    }, { 
-      "constant": false, 
-      "inputs": [], 
-      "name": "withdraw", 
-      "outputs": [], 
-      "payable": false, 
-      "stateMutability": "nonpayable", 
-      "type": "function" 
-    }, { 
-      "constant": true, 
-      "inputs": [ { "name": "_owner", "type": "address" } ], 
-      "name": "balanceOf", 
-      "outputs": [ { "name": "", "type": "uint256", "value": "0" } ], 
-      "payable": false, 
-      "stateMutability": "view", 
-      "type": "function" 
-    }, { 
-      "constant": true, 
-      "inputs": [], 
-      "name": "symbol", 
-      "outputs": [ { "name": "", "type": "string", "value": "Lamborghini" } ], 
-      "payable": false, 
-      "stateMutability": "view", 
-      "type": "function" 
-    }, { 
-      "constant": false, 
-      "inputs": [ { "name": "_to", "type": "address" }, 
-                  { "name": "_amount", "type": "uint256" } ], 
-      "name": "transfer", 
-      "outputs": [ { "name": "success", "type": "bool" } ], 
-      "payable": false, 
-      "stateMutability": "nonpayable", "type": "function" 
-    }, { 
-      "constant": true, 
-      "inputs": [ { "name": "tokenAddress", "type": "address" }, 
-                  { "name": "who", "type": "address" } ], 
-      "name": "getTokenBalance", 
-      "outputs": [ { "name": "", "type": "uint256", "value": "0" } ], 
-      "payable": false, 
-      "stateMutability": "view", 
-      "type": "function" 
-    }, { 
-      "constant": true, 
-      "inputs": [ { "name": "_owner", "type": "address" }, 
-                  { "name": "_spender", "type": "address" } ], 
-      "name": "allowance", 
-      "outputs": [ { "name": "", "type": "uint256", "value": "0" } ], 
-      "payable": false, "stateMutability": "view", "type": "function" 
-    }, { 
-      "constant": false, 
-      "inputs": [ { "name": "_tokenContract", "type": "address" } ], 
-      "name": "withdrawForeignTokens", 
-      "outputs": [ { "name": "", "type": "bool" } ], 
-      "payable": false, 
-      "stateMutability": "nonpayable", 
-      "type": "function" 
-    }, { 
-      "constant": false, 
-      "inputs": [ { "name": "newOwner", "type": "address" } ], 
-      "name": "transferOwnership", 
-      "outputs": [], 
-      "payable": false, 
-      "stateMutability": "nonpayable", 
-      "type": "function" 
-    }, { 
-      "constant": false, 
-      "inputs": [ { "name": "_to", "type": "address" }, 
-                  { "name": "_amount", "type": "uint256" } ], 
-      "name": "distribute", 
-      "outputs": [ { "name": "", "type": "bool" } ], 
-      "payable": false, 
-      "stateMutability": "nonpayable", 
-      "type": "function" 
-    }, { 
-      "inputs": [ { "name": "_totalSupply", 
-                    "type": "uint256", 
-                    "index": 0, 
-                    "typeShort": "uint", 
-                    "bits": "256", 
-                    "displayName": "&thinsp;<span class=\"punctuation\">_</span>&thinsp;total Supply", 
-                    "template": "elements_input_uint", 
-                    "value": "256" } ], 
-      "payable": false, 
-      "stateMutability": "nonpayable", 
-      "type": "constructor" 
-    }, { 
-      "payable": true, 
-      "stateMutability": "payable", 
-      "type": "fallback" 
-    }, { 
-      "anonymous": false, 
-      "inputs": [ { "indexed": true, 
-                    "name": "_from", 
-                    "type": "address" 
-                  }, { 
-                    "indexed": true, 
-                    "name": "_to", 
-                    "type": "address" 
-                  }, { 
-                    "indexed": false, 
-                    "name": "_value", 
-                    "type": "uint256" 
-                  } ], 
-      "name": "Transfer", 
-      "type": "event" 
-    }, { 
-      "anonymous": false, 
-      "inputs": [ { "indexed": true, 
-                    "name": "_owner", 
-                    "type": "address" 
-                  }, { 
-                    "indexed": true, 
-                    "name": "_spender", 
-                    "type": "address" 
-                  }, { 
-                    "indexed": false, 
-                    "name": "_value", 
-                    "type": "uint256" } ], 
-      "name": "Approval", 
-      "type": "event" 
-    } 
-  ]
+  awaiting update
   ```
 
 ### FAQ
 - **Why Lamborghini?**
 
-The first car any cryptomillionaire must buy is obviously a Lamborghini, so logically the original ultra rare coin should be based on them.
+The first car any cryptomillionaire must buy is obviously a Lamborghini, so logically the original ultra rare coin should be based on them. This coin will also provide investors with bonuses when our games are released to thank you for helping our cause.
 
 - **Why only 256 coins?**
 
@@ -239,11 +54,11 @@ For Exclusivity, Like a real Lamborghini each coin is exclusive and made in limi
 
 - **How do I get them?**
 
-Add the contract above to your ethereum client. Website coming soon!
+Add the ICO contract above to your ethereum client to purchase. Single coins may be purchased by sending the current price in ether directly to the contract, multiple coin purchases require the ICO interface. Website coming soon!
 
-- **If I dont get any coins will I get my Ether back?**
+- **Will I get my left over Ether back?**
 
-You may withdraw funds up until the ICO contract is finished. After this time any remaining funds can no longer be refunded.
+You may withdraw funds up until the ICO contract is finished. After this time any remaining funds can no longer be refunded as the contract will be withdrawn from the blockchain.
 
 ### To Do:
 - [x] Write Contract
