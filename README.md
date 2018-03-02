@@ -14,7 +14,6 @@ When all Lamborghinis are sold!
 - Lamborghinis are distributed first come, first serve.
 - Lamborghinis are tradable as soon as you buy them!
 - each successive lamborghini is cost `price * interest rate` more. Don't miss out!!
-- Ether sent to ICO contract will only allow purchase of 1 Lamborghini at a time.
 - Ensure you withdraw all your remaining funds. The ICO will end as last Lamborghini is sold, but a grace period will be allowed for users to withdraw their remaining funds before the ICO contract is shut down.
 - LamboCoin is an unowned ERC20 compliant contract, it will never selfdestruct and you can trade it as you wish!
 - Adopters get special rewards in our future games!
@@ -54,11 +53,15 @@ For Exclusivity, Like a real Lamborghini each coin is exclusive and made in limi
 
 - **How do I get them?**
 
-Add the ICO contract above to your ethereum client to purchase. Single coins may be purchased by sending the current price in ether directly to the contract, multiple coin purchases require the ICO interface. Website coming soon!
+Add the ICO contract above to your ethereum client to purchase. Single coins may be purchased by sending the current price in ether directly to the contract, multiple coin purchases require the ICO interface or use our ~~Website~~ (coming soon!).
 
 - **Will I get my left over Ether back?**
 
 You may withdraw funds up until the ICO contract is finished. After this time any remaining funds can no longer be refunded as the contract will be withdrawn from the blockchain.
+
+- **Why wont it let me send Ether to the ICO?**
+
+You can only purchase a single coin at a time by sending Ether directly, and will only accept a payment of a single Lamborghini at the current price, up to `current price * 110%`. To purchase more at once, please add the interface described above to your wallet interface or use our ~~website~~ (coming soon!).
 
 ### To Do:
 - [x] Write Contract
