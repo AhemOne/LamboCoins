@@ -43,7 +43,7 @@ When all Lamborghinis are sold!
   ```
 
 #### LamboCoin
-  **Contract Address:** `0xeFD988452f4a780919734E8f9cee589Afe09e78b` [Etherscan](https://etherscan.io/address/0xefd988452f4a780919734e8f9cee589afe09e78b) 
+  **Contract Address:** `0xefd988452f4a780919734e8f9cee589afe09e78b` [Etherscan](https://etherscan.io/address/0xefd988452f4a780919734e8f9cee589afe09e78b) 
   
   _Note: LamboCoin manages the ICO in a separate contract_
   
