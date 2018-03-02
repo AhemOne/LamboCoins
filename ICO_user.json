@@ -1,0 +1,94 @@
+[ { 
+  "constant": true, 
+  "inputs": [], 
+  "name": "name", 
+  "outputs": [ { "name": "", "type": "string" } ], 
+  "payable": false, 
+  "stateMutability": "pure", 
+  "type": "function" 
+}, { 
+  "constant": true, 
+  "inputs": [], 
+  "name": "coin", 
+  "outputs": [ { "name": "", "type": "address" } ], 
+  "payable": false, 
+  "stateMutability": "view", 
+  "type": "function" 
+}, { 
+  "constant": false, "inputs": [ { "name": "amount", "type": "uint256" } ], 
+  "name": "withdraw", 
+  "outputs": [], 
+  "payable": false, 
+  "stateMutability": "nonpayable", 
+  "type": "function" 
+}, { 
+  "constant": true, 
+  "inputs": [], 
+  "name": "decimals", 
+  "outputs": [ { "name": "", "type": "uint256" } ], 
+  "payable": false, 
+  "stateMutability": "pure", 
+  "type": "function" 
+}, { 
+  "constant": true, 
+  "inputs": [], 
+  "name": "priceGuice", 
+  "outputs": [  { "name": "unsoldCoins", "type": "uint256" }, 
+                { "name": "currentPrice", "type": "uint256" }, 
+                { "name": "nextPrice", "type": "uint256" }, 
+                { "name": "InterestRateNumerator", "type": "uint256" }, 
+                { "name": "InterestRateDenominator", "type": "uint256" } ], 
+  "payable": false, 
+  "stateMutability": "view", 
+  "type": "function" 
+}, {  
+  "constant": true, 
+  "inputs": [ { "name": "who", "type": "address" } ], 
+  "name": "balanceOf", 
+  "outputs": [ { "name": "", "type": "uint256" } ], 
+  "payable": false, 
+  "stateMutability": "view", 
+  "type": "function" 
+}, { 
+  "constant": true, 
+  "inputs": [], 
+  "name": "symbol", 
+  "outputs": [ { "name": "", "type": "string" } ], 
+  "payable": false, 
+  "stateMutability": "pure", 
+  "type": "function" 
+}, { 
+  "constant": false, 
+  "inputs": [], 
+  "name": "buy", 
+  "outputs": [], 
+  "payable": true, 
+  "stateMutability": "payable", 
+  "type": "function" 
+}, { 
+  "payable": true, 
+  "stateMutability": "payable", 
+  "type": "fallback" 
+}, { 
+  "anonymous": false, 
+  "inputs": [ { "indexed": false, "name": "person", "type": "address" }, 
+              { "indexed": false, "name": "amount", "type": "uint256" } ], 
+  "name": "WithdrawalOfFunds", 
+  "type": "event" 
+}, { 
+  "anonymous": false, 
+  "inputs": [ { "indexed": false, "name": "number", "type": "uint256" } ], 
+  "name": "CoinsSold", 
+  "type": "event" 
+}, { 
+  "anonymous": false, 
+  "inputs": [], 
+  "name": "ICOIsOver", 
+  "type": "event" 
+}, { 
+  "anonymous": false, 
+  "inputs": [ { "indexed": false, "name": "newNum", "type": "uint256" }, 
+              { "indexed": false, "name": "newDenom", "type": "uint256" } ], 
+  "name": "InterestRateChange", 
+  "type": "event" 
+} ]
