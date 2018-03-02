@@ -69,7 +69,7 @@ You can only purchase a single coin at a time by sending Ether directly, and wil
 - [x] Hone pricing scheme
 - [ ] Launch contract to MainNet
 - [x] JSON files for Admin
-- [ ] JSON files for User
+- [x] JSON files for User
 - [ ] Add Contract source(s) to [Etherscan](https://etherscan.io)
 - [ ] Develop webpage
 - [ ] Test webpage
