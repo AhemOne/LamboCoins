@@ -64,9 +64,13 @@ You may withdraw funds up until the ICO contract is finished. After this time an
 You can only purchase a single coin at a time by sending Ether directly, and will only accept a payment of a single Lamborghini at the current price, up to `current price * 110%`. To purchase more at once, please add the interface described above to your wallet interface or use our ~~website~~ (coming soon!).
 
 ### To Do:
-- [x] Write Contract
-- [x] Test Contract
-- [ ] Add Contract source to [Etherscan](https://etherscan.io)
-- [ ] Trim JSON
-- [ ] Release to MainNet
-- [ ] Develop Front-end for users
+- [x] Complete contract
+- [x] Alpha test contract (closed)
+- [ ] Hone pricing scheme
+- [ ] Launch contract to MainNet
+- [ ] JSON files for Admin
+- [ ] JSON files for User
+- [ ] Add Contract source(s) to [Etherscan](https://etherscan.io)
+- [ ] Develop webpage
+- [ ] Test webpage
+- [ ] Launch webpage to server
