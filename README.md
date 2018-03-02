@@ -11,14 +11,23 @@ When all Lamborghinis are sold!
 
 ### Whats this project all about?
 :thumbsup: Ultra limited edition, only 250 Lamborghinis released publicly!
+
 :thumbsup: the ORIGINAL collector coin!
+
 :thumbsup: 6 coins are retained for the developers (< 2.5% of all Lamborghinis, we're not greedy).
+
 :thumbsup: 256 total Lamborghinis.
+
 :thumbsup: Lamborghinis are distributed first come, first serve.
+
 :thumbsup: Lamborghinis are tradable as soon as you buy them!
+
 :thumbsup: each successive lamborghini is cost `price * interest rate` more. Don't miss out!!
+
 :thumbsup: Ensure you withdraw all your remaining funds. The ICO will end as last Lamborghini is sold, but a grace period will be allowed for users to withdraw their remaining funds before the ICO contract is shut down.
+
 :thumbsup: LamboCoin is an unowned ERC20 compliant contract, it will never selfdestruct and you can trade it as you wish!
+
 :thumbsup: Adopters get special rewards in our future games!
 
 ### What's the details?
