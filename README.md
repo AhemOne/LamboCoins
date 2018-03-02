@@ -33,7 +33,7 @@ When all Lamborghinis are sold!
 ### What's the details?
 #### Initial Coin Offering (ICO):
 
-  **Contract Address:** `0xefd988452f4a780919734e8f9cee589afe09e78b` [Etherscan](https://etherscan.io/address/0xefd988452f4a780919734e8f9cee589afe09e78b)
+  **Contract Address:** `0xfe97fd8e9375f1463544c22fb78d895ad1c668a9` [Etherscan](https://etherscan.io/address/0xfe97fd8e9375f1463544c22fb78d895ad1c668a9)
 
   Send Ether to this address to get your Lamborghinis! Use the pay() function in your wallet interface to buy multiple coins at a time, ether sent directly will only allow the purchase of a _single_ Lamborghini at a time. The ICO contact constitutes a basic token so you can add it to your watched tokens list and doing show will display how much ether left over Ether is available to you for withdrawal. _Please withdraw your remaining funds before the ICO end date posted above or risk losing it!_
   
