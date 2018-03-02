@@ -1,5 +1,5 @@
 # LamboCoins
-## The Ferrari of Altcoins - An ultra-limited supply collector's edition coin for the astute crypto-wizard
+## The Ferrari of Altcoins - An ultra-limited supply collector's edition altcoin for the astute crypto-wizard
 
 ### Closing Date
 ```
