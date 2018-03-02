@@ -24,9 +24,9 @@ When all Lamborghinis are sold!
 
   **Contract Address:** `none currently` [Etherscan](https://rinkeby.etherscan.io/address/?)
 
-  Send Ether to this address to get your Lamborghinis! The ICO contact constitutes a basic token so you can add it to your watched tokens list. Doing show will display how much ether left over ether is available to you for withdrawal. _Please withdraw your remaining funds before the ICO end date posted above or risk losing it!_
+  Send Ether to this address to get your Lamborghinis! Use the pay() function in your wallet interface to buy multiple coins at a time, ether sent directly will only allow the purchase of a _single_ Lamborghini at a time. The ICO contact constitutes a basic token so you can add it to your watched tokens list and doing show will display how much ether left over Ether is available to you for withdrawal. _Please withdraw your remaining funds before the ICO end date posted above or risk losing it!_
   
-  JSON Interface; copy the code below to your preferred wallet interface to see your current standing
+  JSON Interface; copy the code below to your preferred wallet interface to access the functionality
   ```
   awaiting update
   ```
@@ -36,9 +36,9 @@ When all Lamborghinis are sold!
   
   _Note: LamboCoin manages the ICO in a separate contract_
   
-  Add this address to your wallet interface to tranfer your coins. This is a ERC20 compliant token so may be traded at will. This address will _not_ accept Ether. Please buy tokens from the ICO address.
+  Add this address to your wallet interface to tranfer your Lamborghinis. This is a ERC20 compliant token so may be traded at will. Lamborghinis are assigned upon purchase and are available to trade straight away!. This address will _not_ accept Ether. Please buy Lamborghinis from the ICO address above.
 
-  - JSON Interface; copy the code below to your preferred wallet interface to access the trade functions
+  - JSON Interface; copy the code below to your preferred wallet interface to access the trade functionality
   ```
   awaiting update
   ```
