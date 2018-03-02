@@ -2,46 +2,47 @@
 ## The Ferrari of Altcoins - An ultra-limited supply collector's edition coin for the astute crypto-wizard
 
 ### Closing Date
-_Subject to change depending on demand. Check back here for the most up to date information_
 ```
-1st April, 2018
+When all Lamborghinis are sold!
 ```
 
 ### Whats this project all about?
-- Ultra limited edition, only 250 coins released publicly!
-- the ORIGINAL collector coin
-- 6 coins are retained for the developers (< 2.5% of all Lambos)
-- 256 total Lambos spawned
-- Lambos are distributed amongst the accounts at the end of the ICO who have sent the most Ether
-- Make sure your balance is above the CurrentPrice at the end of the ICO to get your Lambo(s). Don't miss out!!
-- send Ether straight to the contract address, it's that easy!
+- Ultra limited edition, only 250 Lamborghinis released publicly!
+- the ORIGINAL collector coin!
+- 6 coins are retained for the developers (< 2.5% of all Lamborghinis, we're not greedy).
+- 256 total Lamborghinis.
+- Lamborghinis are distributed first come, first serve.
+- Lamborghinis are tradable as soon as you buy them!
+- each successive lamborghini is cost `price * interest rate` more. Don't miss out!!
+- Ether sent to ICO contract will only allow purchase of 1 Lamborghini at a time.
+- Ensure you withdraw all your remaining funds. The ICO will end approximately 1 week after the last Lamborghini is sold.
 - LamboCoin is an unowned ERC20 compliant contract, it will never selfdestruct and you can trade it as you wish!
 
 ### What's the details?
 - ICO
   - Contract Address (Rinkeby TestNet):
 
-  `0xe81bf7c7f25410931c26ad91cA1b5cdD5DDa4C22`
+  `none currently`
   
-  See it on [Etherscan](https://rinkeby.etherscan.io/address/0xe81bf7c7f25410931c26ad91ca1b5cdd5dda4c22)
+  See it on [Etherscan](https://rinkeby.etherscan.io/address/?)
 
   Send Ether to this address to be in the running to win those LamboCoins!
   
   - JSON Interface; copy the code below to your preferred wallet interface to see your current standing
   ```
-  [ { "constant": true, "inputs": [ { "name": "you", "type": "address" } ], "name": "userStatistics", "outputs": [ { "name": "amount", "type": "uint256", "value": "0" }, { "name": "lambos", "type": "uint256", "value": "0" } ], "payable": false, "stateMutability": "view", "type": "function" }, { "constant": true, "inputs": [], "name": "LamboContractAddress", "outputs": [ { "name": "", "type": "address", "value": "0xde22f96b0ed0c3a906b70cedccbbf259df294359" } ], "payable": false, "stateMutability": "view", "type": "function" }, { "constant": true, "inputs": [], "name": "currentLamboPrice", "outputs": [ { "name": "Gwei", "type": "uint256", "value": "0" } ], "payable": false, "stateMutability": "view", "type": "function" }, { "constant": false, "inputs": [], "name": "endICO", "outputs": [], "payable": false, "stateMutability": "nonpayable", "type": "function" }, { "constant": true, "inputs": [], "name": "investors", "outputs": [ { "name": "", "type": "uint256", "value": "0" } ], "payable": false, "stateMutability": "view", "type": "function" }, { "constant": true, "inputs": [], "name": "owner", "outputs": [ { "name": "", "type": "address", "value": "0xfd8d1160459e17a9d7ec2c62340760e24a5f75ab" } ], "payable": false, "stateMutability": "view", "type": "function" }, { "inputs": [], "payable": false, "stateMutability": "nonpayable", "type": "constructor" }, { "payable": true, "stateMutability": "payable", "type": "fallback" }, { "anonymous": false, "inputs": [ { "indexed": false, "name": "who", "type": "address" }, { "indexed": false, "name": "userNumber", "type": "uint256" } ], "name": "newInvestor", "type": "event" }, { "anonymous": false, "inputs": [ { "indexed": false, "name": "who", "type": "address" }, { "indexed": false, "name": "howMuch", "type": "uint256" } ], "name": "valueAdded", "type": "event" } ]
+  awaiting update
   ```
 
 - LamboCoin
   - Contract Address (Rinkeby TestNet):
 
-  `0xdE22f96b0Ed0C3a906B70cEDCCBbf259dF294359`
+  `none currently`
   
-  See it on [Etherscan](https://rinkeby.etherscan.io/address/0xdE22f96b0Ed0C3a906B70cEDCCBbf259dF294359) 
+  See it on [Etherscan](https://rinkeby.etherscan.io/address/?) 
   
-  _Note: Because this coin is launched by the ICO contract, it will not become active until the end of the ICO_
+  _Note: LamboCoin manages the ICO in a separate contract_
   
-  Add this address to your wallet interface to view your coins upon distribution
+  Add this address to your wallet interface to tranfer your coins
 
   - JSON Interface; copy the code below to your preferred wallet interface to access the trade functions
   ```
@@ -230,19 +231,19 @@ _Subject to change depending on demand. Check back here for the most up to date 
 ### FAQ
 - **Why Lamborghini?**
 
-The first car any cryptomillionaire must buy is obviously a Lamborghini, so logically the original ultra rare coin should be based on them
+The first car any cryptomillionaire must buy is obviously a Lamborghini, so logically the original ultra rare coin should be based on them.
 
 - **Why only 256 coins?**
 
-For Exclusivity, Like a real Lamborghini each coin is exclusive and made in limited numbers. This IGO is the only IGO that will occur meaning you will be one of the elite few who can have the privelege of owning one (or many, depending on how much Ether you have)
+For Exclusivity, Like a real Lamborghini each coin is exclusive and made in limited numbers. This IGO is the only IGO that will occur meaning you will be one of the elite few who can have the privelege of owning one (or many, depending on how much Ether you have). 256 was chosen because it is equal to 2^8, it's an awesome number.
 
 - **How do I get them?**
 
-Just send Ether to the contract address, coins will be distributed to the highest bidders such that the lowest bid, when applied to these highest bidders, will distribute no more than 250 coins to them
+Add the contract above to your ethereum client. Website coming soon!
 
 - **If I dont get any coins will I get my Ether back?**
 
-No, it's a risk you must be willing to take. No one said ultra-exclusivity would be cheap.
+You may withdraw funds up until the ICO contract is finished. After this time any remaining funds can no longer be refunded.
 
 ### To Do:
 - [x] Write Contract
