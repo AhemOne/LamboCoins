@@ -1,0 +1,294 @@
+pragma solidity ^0.4.18;
+
+library SafeMath {
+  function mul(uint256 a, uint256 b) internal pure returns (uint256) {
+    if( a == 0 || b == 0) return 0;
+    uint256 c = a * b;
+    assert(c / a == b);
+    return c;
+  }
+
+  function div(uint256 a, uint256 b) internal pure returns (uint256) {
+    if (b == 0) return 0;
+    uint256 c = a / b;
+    assert(a == (b * c) + (a % b));
+    return c;
+  }
+
+  function sub(uint256 a, uint256 b) internal pure returns (uint256) {
+    assert(b <= a);
+    return a - b;
+  }
+
+  function add(uint256 a, uint256 b) internal pure returns (uint256) {
+    uint256 c = a + b;
+    assert(c >= a);
+    return c;
+  }
+}
+
+contract ERC20 {
+    function name() public constant returns (string);
+    function symbol() public constant returns (string);
+    function decimals() public constant returns (uint256);
+    function totalSupply() public constant returns (uint256);
+    function balanceOf(address who) public constant returns (uint256);
+    function transfer(address to, uint256 value) public returns (bool);
+    event Transfer(address indexed from, address indexed to, uint256 value);
+    function allowance(address owner, address spender) public constant returns (uint256);
+    function transferFrom(address from, address to, uint256 value) public returns (bool);
+    function approve(address spender, uint256 value) public returns (bool);
+    event Approval(address indexed owner, address indexed spender, uint256 value);
+}
+
+contract ICOinfo {
+    using SafeMath for uint;
+    
+    address private benefactor;
+    
+    LamboCoin public coin;
+    mapping(address => uint) balance;
+    mapping(address => uint) withdrawal;
+    uint private buyItNow;
+    struct IR {
+        uint numerator;
+        uint denominator;
+    } IR private interestRate;
+
+    function ICOinfo(address coinAddress, address creator) public {
+        coin = LamboCoin(coinAddress);
+        benefactor = creator;
+        buyItNow = 250 finney;
+        interestRate.numerator =   1020591;
+        interestRate.denominator = 1000000;
+    }
+    
+    function balanceOf(address who) public constant returns (uint256) {
+        return balance[who];
+    }
+    
+    function name() public pure returns (string) {
+        return "LamboCoin ICO";
+    }
+    
+    function symbol() public pure returns (string) {
+        return "Ξ";
+    }
+    
+    function decimals() public pure returns (uint256) {
+        return 18;
+    }
+    
+    function CoinsLeft() private view returns (uint remainingCoinsToBeClaimed) {
+        remainingCoinsToBeClaimed = coin.balanceOf(0x0);
+    }
+    
+    modifier GTZero(uint variable) {
+        require(variable > 0);
+        _;
+    }
+    
+    modifier BenefactorOnly() {
+        require(msg.sender == benefactor);
+        _;
+    }
+    
+    event WithdrawalOfFunds(address person, uint amount);
+    function withdraw(uint amount) GTZero(amount) public {
+        require(amount <= this.balance);
+        require(amount <= balance[msg.sender]);
+        // Withhold funds from account until payment is processed
+        withdrawal[msg.sender] = balance[msg.sender];
+        balance[msg.sender] = 0;
+        msg.sender.transfer(amount);
+        balance[msg.sender] = withdrawal[msg.sender].sub(amount);
+        withdrawal[msg.sender] = 0;
+        // announce
+        if (msg.sender != benefactor) {
+            WithdrawalOfFunds(msg.sender, amount);
+        }
+    }
+    // fallback only allows purchasing one coin at a time
+    function () public payable {
+        require(msg.value >= buyItNow && msg.value <= buyItNow * 6/5);
+        buy();
+    }
+    // Buy Function
+    event CoinsSold(uint number);
+    event ICOIsOver();
+    function buy() GTZero(msg.value) public payable {
+        LamboCoin lamboCoin = LamboCoin(coin);
+        // safety checks
+        require(msg.sender != 0x0);
+        // Get the users avaiable spend
+        uint value = balance[msg.sender];
+        balance[msg.sender] = 0;
+        value = value.add(msg.value);
+        // Find how many coins the user is entitled to
+        uint coinsOwed;
+        uint coinsLeft = CoinsLeft();
+        while (value >= buyItNow) {
+            if (coinsLeft > 0) {
+                value = value.sub(buyItNow);
+                balance[benefactor] = balance[benefactor].add(buyItNow);
+                coinsOwed++;
+                coinsLeft--;
+                buyItNow = calculateNextPrice();
+            } else {
+                break;
+            }
+        }
+        // Give the user their purchased coins
+        if (coinsOwed > 0) {
+            lamboCoin.transfer(msg.sender, coinsOwed);
+            CoinsSold(coinsOwed);
+        }
+        // End the ICO phase when no coins are left
+        if (coinsLeft == 0) {
+            lamboCoin.endICO();
+            ICOIsOver();
+        }
+        // allow the user's leftover funds be available to withdraw
+        balance[msg.sender] = balance[msg.sender].add(value);
+    }
+    
+    function calculateNextPrice() private view returns (uint newPrice) {
+        newPrice = buyItNow * interestRate.numerator / interestRate.denominator;
+    }
+    
+    function priceGuice() public view returns (uint unsoldCoins, uint currentPrice, uint nextPrice, uint InterestRateNumerator, uint InterestRateDenominator) {
+        unsoldCoins = CoinsLeft();
+        currentPrice = buyItNow;
+        nextPrice = calculateNextPrice();
+        InterestRateNumerator = interestRate.numerator;
+        InterestRateDenominator = interestRate.denominator;
+    }
+    
+    event InterestRateChange(uint newNum, uint newDenom);
+    function setInterestRate(uint newNum, uint newDenom) GTZero(newDenom) BenefactorOnly public {
+        require(CoinsLeft() > 1);
+        
+        interestRate.numerator = newNum;
+        interestRate.denominator = newDenom;
+        
+        InterestRateChange(newNum, newDenom);
+    }
+    
+    /** @dev selfdestruct with tests
+     */
+    function ageGracefully() BenefactorOnly public {
+        require(CoinsLeft() == 0);
+        
+        selfdestruct(benefactor);
+    }
+}
+
+contract LamboCoin is ERC20 {
+    using SafeMath for uint;
+    
+    // LamboCoin information
+    function name() public constant returns (string) {
+        return "LamboCoin";
+    }
+    
+    function symbol() public constant returns (string) {
+        if (balanceOf(msg.sender) > 1) {
+            return "Lamborghinis";
+        } else {
+            return "Lamborghini";
+        }
+    }
+    
+    function decimals() public constant returns (uint256) {
+        return 0;
+    }
+    
+    function totalSupply() public constant returns (uint256) {
+        return 256;
+    }
+    
+    struct coinholder {
+        uint balance;
+        mapping (address => uint) allowance;
+    }
+    
+    ICOinfo public ICO;
+    mapping(address => coinholder) information;
+    
+    function LamboCoin() public {
+        ICO = new ICOinfo(this, msg.sender);
+        // endow starting balances
+        information[0].balance = 250;
+        information[msg.sender].balance = totalSupply().sub(information[0].balance);
+    }
+    
+    event ICOIsOver();
+    function endICO() public {
+        uint a; uint b; uint c; uint d; uint CoinsLeft;
+        (CoinsLeft, a, b, c, d) = ICO.priceGuice();
+        // safety checks
+        require(CoinsLeft == 0);
+        require(msg.sender == address(ICO));
+        require(ICO != address(this));
+        // remove ICO contract information
+        ICO = ICOinfo(this);
+        ICOIsOver();
+    }
+    
+    // events
+    event Transfer(address indexed from, address indexed to, uint256 value);
+    event Approval(address indexed owner, address indexed spender, uint256 value);
+
+    // standard ERC20 functions
+    function balanceOf(address who) public constant returns (uint256) {
+        return information[who].balance;
+    }
+    
+    function transfer(address to, uint256 value) public returns (bool success) {
+        require(value > 0);
+        require(to != 0x0);
+        
+        if (msg.sender == address(ICO)) {
+            // ICO endowment
+            require(ICO != address(this));
+            information[0x0].balance = information[0x0].balance.sub(value);
+        } else {
+            // normal transfer
+            require(msg.sender != address(this));
+            information[msg.sender].balance = information[msg.sender].balance.sub(value);
+        }
+        information[to].balance = information[to].balance.add(value);
+        success = true;
+
+        Transfer(msg.sender, to, value);
+    }
+    
+    function allowance(address owner, address spender) public constant returns (uint256) {
+        return information[owner].allowance[spender];
+    }
+    
+    function transferFrom(address from, address to, uint256 value) public returns (bool success) {
+        require(to != address(0));
+        require(value <= information[from].balance);
+        require(value <= information[from].allowance[msg.sender]);
+        
+        information[from].balance = information[from].balance.sub(value);
+        information[from].allowance[msg.sender] = information[from].allowance[msg.sender].sub(value);
+        information[to].balance = information[to].balance.add(value);
+        success = true;
+        
+        Transfer(from, to, value);
+    }
+    
+    function approve(address spender, uint256 value) public returns (bool success) {
+        require(value <= information[msg.sender].balance);
+        
+        if (value != 0 && information[msg.sender].allowance[spender] != 0) { 
+            return false;
+        }
+        information[msg.sender].allowance[spender] = value;
+        success = true;
+        
+        Approval(msg.sender, spender, value);
+    }
+}
